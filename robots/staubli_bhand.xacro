@@ -14,11 +14,11 @@
     <xacro:staubli_rx60l prefix="${prefix}"/>
 
     <!-- Barrett Hand Mount -->
-      <xacro:barrett_hand_mount prefix="${prefix}" parent="/staubli_rx60l_link7" length="0.0775" radius="0.05" barrett_mount_width="0.15" barrett_mount_height=".03"/>
+      <xacro:barrett_hand_mount prefix="${prefix}" parent="${prefix}staubli_rx60l_link7" length="0.0775" radius="0.05" barrett_mount_width="0.15" barrett_mount_height=".03"/>
 
       <!-- BHand -->
-    <xacro:bhand prefix="wam/bhand" parent_link="/staubli_rx60l_link7" xyz="${hand_xyz_offset}" rpy="${hand_rpy_offset}"/>
+    <xacro:bhand prefix="wam/bhand" parent_link="${prefix}staubli_rx60l_link7" xyz="${hand_xyz_offset}" rpy="${hand_rpy_offset}"/>
 
   </xacro:macro>
-  <xacro:staubli_bhand prefix="$(arg prefix)"/>
+  <xacro:staubli_bhand prefix=""/>
 </robot>
