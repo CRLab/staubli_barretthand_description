@@ -72,7 +72,7 @@
       </joint>
 
 
-      <link name="${prefix}barrett_palm_surface_frame">
+      <link name="${prefix}approach_tran">
 	<inertial>
 	  <origin xyz="0 0 0" />
 	  <mass value="0.50573"/>
@@ -84,10 +84,10 @@
       </link>
 
       
-      <joint name="${prefix}barrett_palm_surface_joint" type="fixed">
+      <joint name="${prefix}approach_tran_joint" type="fixed">
 	<origin xyz="${palm_xyz_offset}" rpy="${palm_rpy_offset}"/>
 	<parent link="${parent}"/>
-	<child link="${prefix}barrett_palm_surface_frame"/>
+	<child link="${prefix}approach_tran"/>
       </joint>
 
 
