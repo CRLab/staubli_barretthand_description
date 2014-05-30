@@ -3,7 +3,7 @@
 <!-- Calibration for arm to barrett hand -->
 <xacro:include filename="$(arg arm_to_hand_xacro)" />
   <!-- Include staubli robot -->
-<xacro:include filename="$(find staubli)/urdf/rx60l_macro.xacro"/>
+<xacro:include filename="$(find staubli)/urdf/tx60l_macro.xacro"/>
 <!-- Include all the WAM stuff -->
 <xacro:include filename="$(find barrett_model)/models/wam_top.urdf.xacro"/>
 <!-- Include the barrett hands mount on the staubli -->
