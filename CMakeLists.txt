@@ -5,8 +5,8 @@ project(staubli_barretthand_description)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  barrett_model
-  staubli
+  barrett_hand_description
+  staubli_description
 )
 
 ## System dependencies are found with CMake's conventions

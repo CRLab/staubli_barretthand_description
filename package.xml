@@ -41,10 +41,10 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>barrett_model</build_depend>
-  <build_depend>staubli</build_depend>
-  <run_depend>barrett_model</run_depend>
-  <run_depend>staubli</run_depend>
+  <build_depend>barrett_hand_description</build_depend>
+  <build_depend>staubli_description</build_depend>
+  <run_depend>barrett_hand_description</run_depend>
+  <run_depend>staubli_description</run_depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->

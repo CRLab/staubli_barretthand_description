@@ -3,9 +3,10 @@
 <!-- Calibration for arm to barrett hand -->
 <xacro:include filename="$(arg arm_to_hand_xacro)" />
   <!-- Include staubli robot -->
-<xacro:include filename="$(find staubli)/urdf/tx60l_macro.xacro"/>
-<!-- Include all the WAM stuff -->
-<xacro:include filename="$(find barrett_model)/models/wam_top.urdf.xacro"/>
+<xacro:include filename="$(find staubli_description)/urdf/tx60l_macro.xacro"/>
+ <!-- Include Barrett Hand robot -->
+<xacro:include filename="$(find barrett_hand_description)/urdf/bh282.urdf.xacro" />
+
 <!-- Include the barrett hands mount on the staubli -->
 <xacro:include filename="$(find staubli_barretthand_description)/urdf/barrett_hand_mount.urdf.xacro"/>
 
@@ -17,7 +18,11 @@
       <xacro:barrett_hand_mount prefix="${prefix}" parent="${prefix}staubli_rx60l_link7" length="0.0775" radius="0.05" barrett_mount_width="0.15" barrett_mount_height=".03"/>
 
       <!-- BHand -->
-    <xacro:bhand prefix="wam/bhand" parent_link="${prefix}staubli_rx60l_link7" xyz="${hand_xyz_offset}" rpy="${hand_rpy_offset}"/>
+    <!--<xacro:bhand prefix="bhand" parent_link="${prefix}staubli_rx60l_link7" xyz="${hand_xyz_offset}" rpy="${hand_rpy_offset}"/>-->
+        <xacro:bhand_macro name="bh" parent="hand_base_link">
+                <origin xyz="${hand_xyz_offset}" rpy="${hand_rpy_offset}" />
+        </xacro:bhand_macro>
+
 
   </xacro:macro>
   <xacro:staubli_bhand prefix=""/>
