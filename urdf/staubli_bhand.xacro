@@ -5,7 +5,7 @@
   <!-- Include staubli robot -->
 <xacro:include filename="$(find staubli_description)/urdf/tx60l_macro.xacro"/>
  <!-- Include Barrett Hand robot -->
-<xacro:include filename="$(find barrett_hand_description)/urdf/bh282.urdf.xacro" />
+<xacro:include filename="$(find barrett_hand_description)/urdf/bh280.urdf.xacro" />
 
 <!-- Include the barrett hands mount on the staubli -->
 <xacro:include filename="$(find staubli_barretthand_description)/urdf/barrett_hand_mount.urdf.xacro"/>
